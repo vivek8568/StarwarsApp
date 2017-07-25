@@ -4,7 +4,7 @@ import {
   Redirect,
 } from 'react-router-dom';
 
-import { attemptLogin } from '../actions/LoginActions';
+import { attemptLogin } from '../../actions/LoginActions';
 
 const mapStateToProps = (state) => {
     return{

@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import PlanetList from './PlanetList';
-import {searchPlanet, blankSearchResult} from '../actions/PlanetActions';
+import PlanetList from '../presentational/PlanetList';
+import {searchPlanet, blankSearchResult} from '../../actions/PlanetActions';
 
 const mapStateToProps = (state) => {
     return {
