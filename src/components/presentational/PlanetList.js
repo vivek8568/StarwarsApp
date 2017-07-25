@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const PlanetList = ({planetList}) => {
     return(
@@ -19,6 +20,10 @@ const PlanetList = ({planetList}) => {
             </div>
         </div>
     )
+}
+
+PlanetList.propTypes = {
+    planetList :  PropTypes.array.isRequired
 }
 
 export default PlanetList;
