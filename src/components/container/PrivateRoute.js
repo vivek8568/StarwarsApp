@@ -4,6 +4,7 @@ import {
   Redirect,
 } from 'react-router-dom';
 import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
 
 const mapStateToProps = (state) => {
     return{
@@ -23,5 +24,9 @@ const PrivateRoute = ({ component: Component, isLoggedIn, path }) => (
         )
     )} />
 )
+
+PrivateRoute.propTypes = {
+    isLoggedIn : PropTypes.bool.isRequired
+}
 
 export default connect(mapStateToProps)(PrivateRoute);

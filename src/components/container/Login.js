@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import {
-  Redirect,
-} from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import { attemptLogin } from '../../actions/LoginActions';
 
@@ -107,6 +106,11 @@ class Login extends Component{
             </div>
         )
     }
+}
+
+Login.propTypes = {
+    userDetails : PropTypes.object.isRequired,
+    doLogin : PropTypes.func.isRequired
 }
 
 export default connect(mapStateToProps,mapDispatchToProps)(Login);

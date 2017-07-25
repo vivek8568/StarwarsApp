@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
 
 import PlanetList from '../presentational/PlanetList';
 import {searchPlanet, blankSearchResult} from '../../actions/PlanetActions';
@@ -56,6 +57,14 @@ class PlanetSearch extends Component{
             </div>
         )
     }
+}
+
+PlanetSearch.propTypes = {
+    username : PropTypes.string.isRequired,
+    planetList : PropTypes.array.isRequired,
+    disableSearch : PropTypes.bool.isRequired,
+    searchPlanet : PropTypes.func.isRequired,
+    blankSearchResult : PropTypes.func.isRequired
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(PlanetSearch);
