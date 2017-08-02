@@ -1,2 +1,3 @@
 node_modules
 .idea
+src/__tests__/__snapshots__/
