@@ -13,6 +13,7 @@ class Login extends Component{
         }
 
         this.handleInputChange = this.handleInputChange.bind(this);
+        this.handleFormSubmit = this.handleFormSubmit.bind(this);
     }
 
     componentWillUpdate(nextProps){
@@ -33,7 +34,7 @@ class Login extends Component{
 
     handleFormSubmit(event) {
         event.preventDefault();
-        this.props.doLogin(this.state.username, this.state.password)
+        this.props.doLogin(this.state.username, this.state.password);
     }
 
     render(){
@@ -48,7 +49,7 @@ class Login extends Component{
 
         return(
             <div className = "center">
-                <form onSubmit={this.handleFormSubmit.bind(this)}>
+                <form onSubmit={this.handleFormSubmit}>
                     <div className="form_field">
                         <label className= "fieldHeading">
                             Username:
