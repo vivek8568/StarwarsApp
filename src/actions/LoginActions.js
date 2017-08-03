@@ -4,17 +4,17 @@ export const ATTEMPT_LOGIN = "ATTEMPT_LOGIN";
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 export const LOGIN_FAILURE = "LOGIN_FAILURE";
 
-const loginSuccess = (username) => {
+export const loginSuccess = (username) => {
     return {type : LOGIN_SUCCESS, username}
 }
 
-const loginFailure = () => {
+export const loginFailure = () => {
     return {type : LOGIN_FAILURE}
 }
 
 export const attemptLogin = (username, password) => {
   return dispatch => {
-        dispatch({type : ATTEMPT_LOGIN});
+       dispatch({type : ATTEMPT_LOGIN});
 
        return fetch('http://swapi.co/api/people/?search='+username)
             .then(
